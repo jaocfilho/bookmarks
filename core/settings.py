@@ -34,6 +34,9 @@ INSTALLED_APPS = [
     # Local Apps
     'account.apps.AccountConfig',
 
+    # Third Party Apps
+    'social_django',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -133,3 +136,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Media files uploaded by users
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+]
