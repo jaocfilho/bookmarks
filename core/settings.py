@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # Third Party Apps
     'social_django',
     'django_extensions',
+    'easy_thumbnails',
 
     # Django Apps
     'django.contrib.admin',
